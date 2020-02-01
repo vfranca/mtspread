@@ -9,6 +9,13 @@ def precos(symbol: str, count: int, period: str = "Daily") -> list:
     return mql5.CopyClose(symbol, period, 0, count)
 
 
+def spread(symbol1: str, symbol2: str, period: str = "Daily") -> float:
+    """Retorna o spread entre ativos."""
+    preco1 = mql5.iClose(symbol1, period, 0)
+    preco2 = mql5.iClose(symbol2, period, 0)
+    return round(preco2 - preco1, 2)
+
+
 def spreads(prices1: list, prices2: list) -> list:
     """Retorna lista das diferenças entre duas séries de preços."""
     res = []
