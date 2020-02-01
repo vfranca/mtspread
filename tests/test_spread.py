@@ -16,4 +16,4 @@ def test_obtem_lista_de_diferencas_entre_dois_precos():
 
 def test_calcula_media_das_diferencas_de_precos():
     diferencas = [2.50, 4.50, 1.00]
-    assert spread.average(diferencas) == 2.67
+    assert spread.media(diferencas) == 2.67

@@ -1,4 +1,5 @@
 from PyMQL5 import PyMQL5
+import statistics
 
 mql5 = PyMQL5()
 
@@ -16,6 +17,6 @@ def diferencas(prices1: list, prices2: list) -> list:
     return res
 
 
-def average(serie: list) -> float:
+def media(serie: list) -> float:
     """Calcula a média de uma série."""
-    return round(sum(serie) / len(serie), 2)
+    return round(statistics.mean(serie), 2)
