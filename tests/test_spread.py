@@ -1,6 +1,8 @@
 from spread import spread
 from unittest import mock
 
+diferencas = [2.50, 4.50, 1.00]
+
 
 @mock.patch("spread.spread.mql5")
 def test_pega_precos_do_ativo_em_um_periodo(mql5):
@@ -15,5 +17,8 @@ def test_obtem_lista_de_diferencas_entre_dois_precos():
 
 
 def test_calcula_media_das_diferencas_de_precos():
-    diferencas = [2.50, 4.50, 1.00]
     assert spread.media(diferencas) == 2.67
+
+
+def test_calcula_o_desvio_padrao_da_serie():
+    assert spread.desvio_padrao(diferencas) == 1.43

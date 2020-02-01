@@ -20,3 +20,8 @@ def diferencas(prices1: list, prices2: list) -> list:
 def media(serie: list) -> float:
     """Calcula a média de uma série."""
     return round(statistics.mean(serie), 2)
+
+
+def desvio_padrao(serie):
+    """Calcula o desvio padrão da série."""
+    return round(statistics.pstdev(serie), 2)
