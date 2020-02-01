@@ -114,6 +114,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "1.8.1"
 
 [[package]]
+category = "main"
+description = "O PyMQL5 é uma API que realiza a conexão entre Python3 e o Metatrader5 através de socket UDP."
+name = "pymql5"
+optional = false
+python-versions = "*"
+version = "1.2.0"
+
+[[package]]
 category = "dev"
 description = "Python parsing module"
 name = "pyparsing"
@@ -184,7 +192,7 @@ python-versions = "*"
 version = "0.1.8"
 
 [metadata]
-content-hash = "71508dfb676eb40385f165e273ff5af01595757ce45f9b76f833ae7a3951020f"
+content-hash = "b01d8e7551db6dcaeb799b85e56b2987a86031640d969a47a85e11939e229525"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -231,6 +239,10 @@ pluggy = [
 py = [
     {file = "py-1.8.1-py2.py3-none-any.whl", hash = "sha256:c20fdd83a5dbc0af9efd622bee9a5564e278f6380fffcacc43ba6f43db2813b0"},
     {file = "py-1.8.1.tar.gz", hash = "sha256:5e27081401262157467ad6e7f851b7aa402c5852dbcb3dae06768434de5752aa"},
+]
+pymql5 = [
+    {file = "PyMQL5-1.2.0-py3-none-any.whl", hash = "sha256:ef5a93d44b8bdb68327ee45e3dc4216788f287f926ab7c765cb2689f526d6155"},
+    {file = "PyMQL5-1.2.0.tar.gz", hash = "sha256:3a550ed761664850d42131649a2c0fead0457b8245c5045e72cfca690208ed7c"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.6-py2.py3-none-any.whl", hash = "sha256:c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"},
