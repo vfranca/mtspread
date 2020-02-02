@@ -1,12 +1,12 @@
 from click.testing import CliRunner
-from spread import cli
+from mtspread import cli
 from unittest import mock
 
 
 runner = CliRunner()
 
 
-@mock.patch("spread.cli.get_spread")
+@mock.patch("mtspread.cli.get_spread")
 def test_exibe_spread_entre_dois_ativos(get_spread):
     get_spread.return_value = 2.25
     res = runner.invoke(cli.spread, ["ccmk20", "ccmh20"])

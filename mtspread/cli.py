@@ -1,5 +1,5 @@
 import click
-from spread.spread import (
+from mtspread.spread import (
     precos,
     spreads as get_spreads,
     diferenca_media,
