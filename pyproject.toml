@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mtspread"
+version = "0.1.0"
+description = "Utilitario de linha de comando para operacoes de spread utilizando o MetaTrader 5"
+authors = ["Valmir Franca <vfranca3@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.0"
+pymql5 = "^1.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+
+[tool.poetry.scripts]
+spread = "mtspread.cli:spread"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
