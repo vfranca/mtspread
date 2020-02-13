@@ -13,7 +13,8 @@ def spread(symbol1: str, symbol2: str, period: str = "Daily") -> float:
     """Retorna o spread entre ativos."""
     preco1 = mql5.iClose(symbol1, period, 0)
     preco2 = mql5.iClose(symbol2, period, 0)
-    return round(preco2 - preco1, 2)
+    res = abs(preco2 - preco1)
+    return round(res, 2)
 
 
 def serie_spreads(prices1: list, prices2: list) -> list:
