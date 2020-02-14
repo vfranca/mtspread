@@ -1,6 +1,6 @@
 # MTSpread  
 
-Utilitário de linha de comando para operações de spread utilizando o MetaTrader 5.  
+Utilitário de linha de comando para operações de spread em commodities agrícolas com o MetaTrader 5.  
 
 ------------
 
@@ -21,9 +21,9 @@ Utilitário de linha de comando para operações de spread utilizando o MetaTrad
 
 spread - Retorna dados do spread entre 2 ativos.  
 ```
-> spread <ativo1> <ativo2>  
+> spread <ativo1> <ativo2> [-c 250]  
 ``` 
-Exibe dados do spread entre ativo1 e ativo2  
+Exibe dados do spread entre ativo1 e ativo2 em 250 períodos  
 exemplo:  
 ```
 > spread ccmk20 ccmh20
@@ -31,8 +31,8 @@ exemplo:
 
 resultado:  
 
-3.04  
-media 2.87  
-maxima 3.65  
-minima 1.99  
-desvio padrao 0.32  
+4.00  
+media 3.97  
+maxima 4.80  
+minima 3.64  
+desvio padrao 0.18  

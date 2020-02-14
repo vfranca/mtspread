@@ -9,7 +9,7 @@ runner = CliRunner()
 @mock.patch("mtspread.cli._spread")
 def test_exibe_spread_entre_dois_ativos(spread):
     spread.spread.return_value = 2.25
-    spread.spreads.return_value = [
+    spread.serie_spreads.return_value = [
         1.55,
         1.84,
         1.99,
