@@ -32,7 +32,7 @@ exemplo:
 resultado:  
 
 4.00  
-media 3.97  
+media 250 3.97  
 maxima 4.80  
 minima 3.64  
 desvio padrao 0.18  
