@@ -24,7 +24,10 @@ def test_exibe_spread_entre_dois_ativos(spread):
         3.55,
     ]
     res = runner.invoke(cli.spread, ["ccmk20", "ccmh20"])
-    assert (
-        res.output == "2.25\nmedia 1.00\nmaxima 3.55\nminima 1.55\ndesvio padrao 1.00\n"
-    )
+    expec = "2.25\n"
+    expec += "media 250 1.00\n"
+    expec += "maxima 3.55\n"
+    expec += "minima 1.55\n"
+    expec += "desvio padrao 1.00\n"
+    assert res.output == expec
     assert res.exit_code == 0
