@@ -1,9 +1,9 @@
 @echo off
 
-rem Executa todas as tarefas
+rem Exibe todas as tarefas
 if "%1" == "" (
-call :build
-call :release
+echo build
+echo pos-release
 goto :EOF
 )
 
@@ -13,20 +13,27 @@ call :build
 goto :EOF
 )
 
+rem Executa o pos-release
+if "%1" == "pos-release" (
+call :pos-release
+goto :EOF
+)
+
 :build
-echo executando o build
-echo rodando black
+echo executando black
 black mtspread
 black tests
-echo rodando testes
+echo executando testes
 pytest -q
-echo rodando build
+echo executando build
 poetry build
 echo instalando local
 poetry install
 goto :EOF
 
-:release
-echo executando release
+:pos-release
+echo executando pos-release
+git push
+git push --tags
+git push origin master
 goto :EOF
-
