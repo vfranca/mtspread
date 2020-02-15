@@ -8,7 +8,7 @@ Utilitário de linha de comando para operações de spread em commodities agríc
 
 * [MetaTrader5](https://www.metatrader5.com/pt) - Plataforma de trading.  
 * [API.ex5](https://drive.google.com/file/d/1Osofc0PfxHpKk6FVCVucaSGnlmSPtnaL/view?usp=sharing) - Expert advisor executando no MetaTrader5.  
-* [Python](https://www.python.org/) - Interpretador de comandos disponível no prompt de comando.  
+* [Python](https://www.python.org/downloads/windows) - Interpretador de comandos disponível no prompt de comando.  
 
 
 ## Instalação
