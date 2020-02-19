@@ -17,6 +17,7 @@ black = "^19.10b0"
 
 [tool.poetry.scripts]
 spread = "mtspread.cli:spread"
+asset = "mtspread.cli:asset"
 
 [build-system]
 requires = ["poetry>=0.12"]

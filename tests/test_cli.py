@@ -35,3 +35,18 @@ def test_exibe_spread_entre_dois_ativos(spread):
     expec += "desvio 1.00\n"
     assert res.output == expec
     assert res.exit_code == 0
+
+
+@mock.patch("mtspread.spread.mql5")
+def test_exibe_dados_do_ativo(mql5):
+    mql5.CopyClose.return_value = [47.72, 48.50, 48.61]
+    mql5.iClose.return_value = 48.61
+    res = runner.invoke(cli.asset, ["ccmk20", "-c", 3])
+    expec = "48.61\n"
+    expec += "media 48.28\n"
+    expec += "periodos 3\n"
+    expec += "desvio 0.40\n"
+    expec += "max 48.61\n"
+    expec += "min 47.72\n"
+    assert res.output == expec
+    res.exit_code = 0

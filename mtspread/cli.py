@@ -24,3 +24,22 @@ def spread(symbol1, symbol2, count):
     click.echo("min %.2f" % min(spreads))
     click.echo("desvio %.2f" % desvio)
     return 0
+
+
+@click.command()
+@click.argument("symbol")
+@click.option("--period", "-p", default="Daily", help="Tempo gráfico")
+@click.option("--count", "-c", type=int, default=250, help="Quantidade de períodos")
+def asset(symbol, period, count):
+    """Exibe dados estatísticos do ativo."""
+    preco = _spread.preco(symbol, period)
+    precos = _spread.serie_precos(symbol, count, period)
+    media = _spread.media(precos)
+    desvio = _spread.desvio_padrao(precos)
+    click.echo("%.2f" % preco)
+    click.echo("media %.2f" % media)
+    click.echo("periodos %i" % count)
+    click.echo("desvio %.2f" % desvio)
+    click.echo("max %.2f" % max(precos))
+    click.echo("min %.2f" % min(precos))
+    return 0
