@@ -11,10 +11,16 @@ def spread(symbol1, symbol2, count):
     precos1 = _spread.serie_precos(symbol1, count)
     precos2 = _spread.serie_precos(symbol2, count)
     spreads = _spread.serie_spreads(precos1, precos2)
+    desvio = _spread.desvio_padrao(spreads)
+    media = _spread.media(spreads)
+    venda = media + desvio * 2
+    compra = media - desvio * 2
     click.echo("%.2f" % _spread.spread(symbol1, symbol2))
-    click.echo("media %.2f" % _spread.media(spreads))
+    click.echo("media %.2f" % media)
+    click.echo("venda %.2f" % venda)
+    click.echo("compra %.2f" % compra)
     click.echo("periodos %i" % count)
-    click.echo("maxima %.2f" % max(spreads))
-    click.echo("minima %.2f" % min(spreads))
-    click.echo("desvio padrao %.2f" % _spread.desvio_padrao(spreads))
+    click.echo("max %.2f" % max(spreads))
+    click.echo("min %.2f" % min(spreads))
+    click.echo("desvio %.2f" % desvio)
     return 0
