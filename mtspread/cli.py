@@ -28,7 +28,7 @@ def spread(symbol1, symbol2, count):
 
 @click.command()
 @click.argument("symbol")
-@click.option("--period", "-p", default="Daily", help="Tempo gráfico")
+@click.option("--period", "-p", default="D1", help="Tempo gráfico")
 @click.option("--count", "-c", type=int, default=250, help="Quantidade de períodos")
 def asset(symbol, period, count):
     """Exibe dados estatísticos do ativo."""
