@@ -4,12 +4,12 @@ import statistics
 mql5 = PyMQL5()
 
 
-def preco(symbol: str, period: str = "Daily") -> float:
+def preco(symbol: str, period: str = "D1") -> float:
     """Obtem o preço de fechamento do ativo."""
     return mql5.iClose(symbol, period, 0)
 
 
-def serie_precos(symbol: str, count: int, period: str = "Daily") -> list:
+def serie_precos(symbol: str, count: int, period: str = "D1") -> list:
     """Retorna os preços de fechamento."""
     return mql5.CopyClose(symbol, period, 0, count)
 
