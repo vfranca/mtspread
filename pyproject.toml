@@ -1,10 +1,25 @@
 [tool.poetry]
 name = "mtspread"
-version = "0.4.1"
+version = "0.4.2"
 description = "Utilitario de linha de comando para operacoes de spread em commodities agricolas com o MetaTrader 5"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
+maintainers = ["Valmir Franca <vfranca3@gmail.com>"]
 readme = "README.md"
 license = "MIT"
+repository = "https://github.com/vfranca/mtspread"
+keywords = ["metatrader5", "trading", "commodities", "bmf", "cli"]
+classifiers = [
+"Development Status :: 2 - Pre-Alpha",
+"Environment :: Console",
+"Environment :: Win32 (MS Windows)",
+"Intended Audience :: Financial and Insurance Industry",
+"License :: OSI Approved :: MIT License",
+"Natural Language :: Portuguese (Brazilian)",
+"Operating System :: Microsoft :: Windows :: Windows 10",
+"Programming Language :: Python :: 3.8",
+"Topic :: Adaptive Technologies",
+"Topic :: Office/Business :: Financial :: Investment"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
